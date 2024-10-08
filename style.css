@@ -1,0 +1,119 @@
+/* General Styling */
+body {
+    font-family: 'VT323', monospace;
+    background-color: #ff69b4; /* Dark Pink Background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Container Styling */
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Styling */
+h1 {
+    font-size: 2rem;
+    color: #333;
+    font-family: 'VT323', monospace;
+}
+
+/* Button Styling */
+.button {
+    display: inline-flex; /* Use inline-flex to keep buttons on the same line */
+    flex-direction: column; /* Stack items vertically inside the button */
+    align-items: center; /* Center align items */
+    justify-content: center; /* Center content vertically */
+    width: 150px; /* Set a fixed width */
+    height: 100px; /* Increase height to fit text */
+    padding: 5px; /* Add padding */
+    margin: 10px; /* Add margin for spacing between buttons */
+    font-size: 1.2rem; /* Font size */
+    cursor: pointer; /* Cursor style */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-family: 'VT323', monospace; /* Font family */
+    text-align: center; /* Center text */
+    overflow: hidden; /* Hide overflow text */
+    white-space: normal; /* Allow text to wrap */
+}
+
+.button img {
+    width: 70px;  /* Increase the width of the images */
+    height: 70px; /* Increase the height of the images */
+    margin-bottom: 5px; /* Increase space below the image */
+}
+/* Hover effect */
+.button:hover {
+    background-color: #fe5982; /* Change background on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+
+#yesButton {
+    background-color: green;
+    color: white;
+    font-family: 'VT323', monospace;
+}
+
+#noButton {
+    background-color: red;
+    color: white;
+    font-family: 'VT323', monospace;
+}
+
+/* Hidden Class */
+.hidden {
+    display: none;
+}
+
+/* Calendar Container */
+.calendar-container {
+    margin: 20px 0;
+}
+
+/* Floating Hearts Animation */
+.heart {
+    position: absolute;
+    font-size: 20px; /* Size of the heart emoji */
+    animation: floatHeart 5s ease-in infinite;
+    opacity: 0.8;
+    top: 100vh; /* Start hearts at the bottom */
+}
+
+/* Randomizing Hearts Position and Speed */
+.heart:nth-child(1) { left: 5%; animation-duration: 7s; }
+.heart:nth-child(2) { left: 20%; animation-duration: 6s; }
+.heart:nth-child(3) { left: 40%; animation-duration: 8s; }
+.heart:nth-child(4) { left: 60%; animation-duration: 5s; }
+.heart:nth-child(5) { left: 80%; animation-duration: 9s; }
+
+/* Additional Random Sizes */
+.heart:nth-child(1), .heart:nth-child(4) { font-size: 30px; }
+.heart:nth-child(2), .heart:nth-child(5) { font-size: 15px; }
+
+@keyframes floatHeart {
+    0% {
+        transform: translateY(0);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateY(-50vh) scale(1.2);
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(-100vh) scale(1.5);
+        opacity: 0;
+    }
+}
+
